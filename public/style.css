@@ -1,66 +1,21 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { width: 100%; height: 100%; font-family: Arial, sans-serif; }
-.screen {
-  position: fixed; top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex; align-items: center; justify-content: center;
-  flex-direction: column;
-}
+html, body { height: 100%; width: 100%; font-family: Arial, sans-serif; }
+.screen { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; }
 .hidden { display: none; }
-.intro-overlay {
-  text-align: center;
-  background: rgba(0,0,0,0.3);
-  padding: 2rem;
-  border-radius: 0.5rem;
-}
-.intro-overlay h1 {
-  font-size: 5rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.intro-overlay button {
-  font-size: 2.5rem;
-  padding: 0.5rem 2rem;
-  border: 2px solid #fff;
-  background: rgba(255,255,255,0.2);
-  color: #fff;
-  cursor: pointer;
-}
-#video-screen video {
-  width: 100vw; height: 100vh; object-fit: cover;
-}
-#homepage .content {
-  width: 90%; max-width: 1200px;
-  background: rgba(255,255,255,0.9);
-  padding: 2rem;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-#homepage h2 {
-  font-size: 2.5rem;
-  margin: 1.5rem 0;
-  text-align: center;
-}
-.gallery {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-.gallery .item {
-  width: 30%; padding-bottom: 20%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-radius: 0.5rem;
-}
-.gallery .item span {
-  position: absolute; bottom: 0.5rem; left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  padding: 0.3rem 0.6rem;
-  border-radius: 0.3rem;
-  font-size: 1.1rem;
-}
+#intro { background-image: url('assets/intro-bg.png'); }
+#intro .overlay { position: absolute; top: 15%; left: 50%; transform: translateX(-50%); text-align: center; background: rgba(0,0,0,0.3); padding: 2rem 3rem; border-radius: 1rem; }
+#intro .overlay h1 { font-size: 5rem; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.7); margin-bottom: 1rem; }
+#intro .overlay button { font-size: 2.5rem; padding: 1rem 2rem; border: 2px solid #fff; background: rgba(255,255,255,0.2); color: #fff; cursor: pointer; }
+
+#video { background: #000; }
+#video video { width: 100%; height: 100%; object-fit: cover; }
+
+#home { background-image: url('assets/home-bg.png'); overflow-y: auto; flex-direction: column; }
+.banner { width: 100%; height: 50vh; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; }
+.banner h1 { font-size: 3rem; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.7); }
+.content { width: 90%; max-width: 1200px; background: rgba(255,255,255,0.9); padding: 2rem; margin-top: -25vh; border-radius: 1rem; }
+.content h2 { font-size: 2rem; color: #333; text-align: center; margin: 1.5rem 0; }
+.grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.item { flex: 1; min-width: 200px; text-align: center; }
+.item img { width: 100%; height: auto; border-radius: 0.5rem; }
+.item p { margin-top: 0.5rem; font-size: 1.1rem; color: #333; }
