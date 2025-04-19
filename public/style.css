@@ -1,39 +1,15 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { width: 100%; height: 100%; overflow: hidden; font-family: Arial, sans-serif; }
-
-#intro {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url('intro-bg.png') center/cover no-repeat;
-}
-
-.intro-text {
-  position: absolute;
-  top: 10vh;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.intro-text h1 {
-  font-size: 6rem;
-  line-height: 1.1;
-  color: #fff;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
-  margin-bottom: 1.5rem;
-}
-
-#yes-btn {
-  font-size: 2.5rem;
-  background: rgba(255,255,255,0.3);
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-#yes-btn:hover {
-  background: rgba(255,255,255,0.5);
-}
+body, html { width: 100%; height: 100%; overflow: hidden; font-family: sans-serif; }
+#intro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 100; }
+.intro-bg { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+.intro-text { position: relative; color: #fff; font-size: 6vw; text-align: center; }
+#startBtn { margin-top: 1rem; font-size: 3vw; padding: 0.5rem 2rem; opacity: 0.8; background: none; border: 2px solid #fff; color: #fff; cursor: pointer; }
+#introVideo { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+#main { display: none; width: 100%; height: 100%; overflow-y: auto; }
+header.banner { width: 100%; height: 60vh; background: url('assets/home-bg.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+header.banner h1 { font-size: 4vw; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.7); }
+section { padding: 2rem; background: #fff; }
+section h2 { text-align: center; font-size: 2rem; margin-bottom: 1rem; }
+section .grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
+section .grid div { width: calc(33.333% - 1rem); text-align: center; }
+section .grid img { width: 100%; height: auto; border-radius: 0.5rem; }
