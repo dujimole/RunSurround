@@ -1,15 +1,11 @@
-const yesBtn = document.getElementById('yesBtn');
-const intro = document.getElementById('intro');
-const videoSection = document.getElementById('videoSection');
-const main = document.getElementById('main');
-const video = document.getElementById('introVideo');
-
-yesBtn.addEventListener('click', () => {
-  intro.style.display = 'none';
-  videoSection.style.display = 'block';
-  video.play();
-  video.onended = () => {
-    videoSection.style.display = 'none';
-    main.style.display = 'block';
+document.getElementById('yesBtn').addEventListener('click', () => {
+  document.getElementById('intro').style.display = 'none';
+  const videoSec = document.getElementById('videoSection');
+  videoSec.style.display = 'block';
+  const vid = document.getElementById('introVideo');
+  vid.play();
+  vid.onended = () => {
+    videoSec.style.display = 'none';
+    document.getElementById('homePage').style.display = 'block';
   };
 });

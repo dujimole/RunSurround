@@ -1,12 +1,45 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body, html { width: 100%; height: 100%; font-family: Arial, sans-serif; }
-.section { width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
-#intro img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1; }
-#intro button { padding: 1em 2em; font-size: 1.5em; background: rgba(0,0,0,0.5); color: #fff; border: none; cursor: pointer; }
-#videoSection video { width: 100%; height: 100%; object-fit: cover; }
-.banner { width: 100%; height: 60vh; background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; }
-.banner h1 { color: #fff; font-size: 3em; text-shadow: 0 0 10px rgba(0,0,0,0.5); }
-.surround-moments, .lookbook { padding: 2em; text-align: center; }
-.grid { display: flex; justify-content: center; gap: 1em; margin-top: 1em; }
-.grid div { flex: 1; }
-.grid img { width: 100%; height: auto; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+#intro {
+  background: url('assets/intro-bg.jpg') center/cover no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.intro-overlay {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+.intro-overlay h1 {
+  font-size: 5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.intro-overlay button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.75rem;
+  background: rgba(255,255,255,0.4);
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+#videoSection, #homePage {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#introVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
