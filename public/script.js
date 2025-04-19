@@ -1,16 +1,15 @@
-const startBtn = document.getElementById('start-btn');
+const btn = document.getElementById('startBtn');
 const intro = document.getElementById('intro');
-const videoSection = document.getElementById('video');
-const home = document.getElementById('home');
-const introVideo = document.getElementById('intro-video');
+const video = document.getElementById('introVideo');
+const main = document.getElementById('main');
 
-startBtn.addEventListener('click', () => {
-  intro.classList.add('hidden');
-  videoSection.classList.remove('hidden');
-  introVideo.play();
+btn.addEventListener('click', () => {
+  intro.style.display = 'none';
+  video.style.display = 'block';
+  video.play();
 });
 
-introVideo.addEventListener('ended', () => {
-  videoSection.classList.add('hidden');
-  home.classList.remove('hidden');
+video.addEventListener('ended', () => {
+  video.style.display = 'none';
+  main.style.display = 'block';
 });

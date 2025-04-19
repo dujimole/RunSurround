@@ -4,37 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Run Surround</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section id="intro" class="screen">
-    <div class="overlay">
-      <h1>Run Surround?</h1>
-      <button id="start-btn">YES</button>
+  <div id="intro">
+    <img src="assets/intro-bg.png" alt="Intro Background" class="intro-bg"/>
+    <div class="intro-text">
+      Run Surround?
+      <button id="startBtn">YES</button>
     </div>
-  </section>
-  <section id="video" class="screen hidden">
-    <video id="intro-video" src="assets/run_intro.mp4" autoplay muted playsinline></video>
-  </section>
-  <section id="home" class="screen hidden">
-    <div class="banner">
-      <h1>Run Surround and Free.</h1>
-    </div>
-    <div class="content">
+  </div>
+
+  <video id="introVideo" src="assets/run_intro.mp4" muted playsinline></video>
+
+  <div id="main">
+    <header class="banner">
+      <h1>Run Surround and Free</h1>
+    </header>
+    <section class="surround-moments">
       <h2>Surround Moments</h2>
       <div class="grid">
-        <div class="item"><img src="assets/Tokyo_City_Run.png" alt="Tokyo City Run"><p>Tokyo City Run</p></div>
-        <div class="item"><img src="assets/Seoul_City_Run.png" alt="Seoul City Run"><p>Seoul City Run</p></div>
-        <div class="item"><img src="assets/Swiss_Alps_Trail.png" alt="Swiss Alps Trail"><p>Swiss Alps Trail</p></div>
+        <div><img src="assets/Tokyo_City_Run.png" alt="Tokyo City Run"/><p>Tokyo City Run</p></div>
+        <div><img src="assets/Seoul_City_Run.png" alt="Seoul City Run"/><p>Seoul City Run</p></div>
+        <div><img src="assets/Swiss_Alps_Trail.png" alt="Swiss Alps Trail"/><p>Swiss Alps Trail</p></div>
       </div>
+    </section>
+    <section class="lookbook">
       <h2>Lookbook</h2>
       <div class="grid">
-        <div class="item"><img src="assets/Singlet.png" alt="Singlet"><p>Singlet</p></div>
-        <div class="item"><img src="assets/Shorts.png" alt="Shorts"><p>Shorts</p></div>
-        <div class="item"><img src="assets/Tshirt.png" alt="T-Shirt"><p>T-Shirt</p></div>
+        <div><img src="assets/Singlet.png" alt="Singlet"/></div>
+        <div><img src="assets/Shorts.png" alt="Shorts"/></div>
+        <div><img src="assets/Tshirt.png" alt="Tshirt"/></div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
