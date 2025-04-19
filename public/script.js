@@ -1,15 +1,12 @@
-const btn = document.getElementById('startBtn');
-const intro = document.getElementById('intro');
+const startButton = document.getElementById('startButton');
+const introDiv = document.getElementById('intro');
 const video = document.getElementById('introVideo');
-const main = document.getElementById('main');
 
-btn.addEventListener('click', () => {
-  intro.style.display = 'none';
+startButton.addEventListener('click', () => {
+  introDiv.style.display = 'none';
   video.style.display = 'block';
   video.play();
-});
-
-video.addEventListener('ended', () => {
-  video.style.display = 'none';
-  main.style.display = 'block';
+  video.onended = () => {
+    window.location.href = 'homepage.html';
+  };
 });
