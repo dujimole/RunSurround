@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Run Surround Intro</title>
+  <title>Run Surround</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="intro">
+  <div id="intro" class="screen" style="background-image:url('assets/intro-bg.png')">
     <div class="intro-overlay">
       <h1>Run Surround?</h1>
-      <button id="yesBtn">YES</button>
+      <button id="start-btn">YES</button>
     </div>
   </div>
-  <div id="videoSection" style="display:none;">
-    <video id="introVideo" src="assets/run_intro.mp4" autoplay muted playsinline></video>
+
+  <div id="video-screen" class="screen hidden">
+    <video id="intro-video" src="assets/run_intro.mp4" autoplay muted playsinline onended="showHomepage()"></video>
   </div>
-  <div id="homePage" style="display:none;">
-    <!-- Homepage content here -->
+
+  <div id="homepage" class="screen hidden" style="background-image:url('assets/home-bg.png')">
+    <div class="content">
+      <h2>Surround Moments</h2>
+      <div class="gallery">
+        <div class="item" style="background-image:url('assets/Tokyo_City_Run.png')"><span>Tokyo City Run</span></div>
+        <div class="item" style="background-image:url('assets/Seoul_City_Run.png')"><span>Seoul City Run</span></div>
+        <div class="item" style="background-image:url('assets/Swiss_Alps_Trail.png')"><span>Swiss Alps Trail</span></div>
+      </div>
+      <h2>Lookbook</h2>
+      <div class="gallery">
+        <div class="item" style="background-image:url('assets/Singlet.png')"></div>
+        <div class="item" style="background-image:url('assets/Shorts.png')"></div>
+        <div class="item" style="background-image:url('assets/Tshirt.png')"></div>
+      </div>
+    </div>
   </div>
-  <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>

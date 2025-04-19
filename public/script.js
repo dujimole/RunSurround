@@ -1,11 +1,8 @@
-document.getElementById('yesBtn').addEventListener('click', () => {
-  document.getElementById('intro').style.display = 'none';
-  const videoSec = document.getElementById('videoSection');
-  videoSec.style.display = 'block';
-  const vid = document.getElementById('introVideo');
-  vid.play();
-  vid.onended = () => {
-    videoSec.style.display = 'none';
-    document.getElementById('homePage').style.display = 'block';
-  };
+function showHomepage() {
+  document.getElementById('video-screen').classList.add('hidden');
+  document.getElementById('homepage').classList.remove('hidden');
+}
+document.getElementById('start-btn').addEventListener('click', function() {
+  document.getElementById('intro').classList.add('hidden');
+  document.getElementById('video-screen').classList.remove('hidden');
 });

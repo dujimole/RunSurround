@@ -1,45 +1,66 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; font-family: Arial, sans-serif; }
+.screen {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
 }
-html, body {
-  height: 100%;
-}
-#intro {
-  background: url('assets/intro-bg.jpg') center/cover no-repeat;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
+.hidden { display: none; }
 .intro-overlay {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
   text-align: center;
-  color: white;
+  background: rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 .intro-overlay h1 {
   font-size: 5rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  color: #fff;
+  margin-bottom: 1rem;
 }
 .intro-overlay button {
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-  font-size: 1.75rem;
-  background: rgba(255,255,255,0.4);
-  border: 2px solid white;
-  color: white;
+  font-size: 2.5rem;
+  padding: 0.5rem 2rem;
+  border: 2px solid #fff;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
   cursor: pointer;
 }
-#videoSection, #homePage {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+#video-screen video {
+  width: 100vw; height: 100vh; object-fit: cover;
 }
-#introVideo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#homepage .content {
+  width: 90%; max-width: 1200px;
+  background: rgba(255,255,255,0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#homepage h2 {
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.gallery .item {
+  width: 30%; padding-bottom: 20%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 0.5rem;
+}
+.gallery .item span {
+  position: absolute; bottom: 0.5rem; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
 }
