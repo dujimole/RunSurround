@@ -1,21 +1,64 @@
-/* singlet-trend.css - scroll & zoom fix overrides */
-html, body {
-  height: auto !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  margin: 0;
-  padding: 0;
+/* singlet-trend.css - spacing & mobile fullscreen image update */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap');
+
+/* Full viewport image on mobile */
+.product-gallery {
+  height: 100vh;
+  overflow: hidden;
+}
+.product-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-body {
-  transform: none !important;
-  zoom: 1 !important;
+/* Section spacing */
+.product-info {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+.product-info h1 {
+  margin-bottom: 1.5rem;
+}
+.pd-actions {
+  margin: 2rem 0;
+}
+.subtitle {
+  margin-bottom: 1.5rem;
+}
+.description {
+  margin-bottom: 2rem;
+}
+.features-list {
+  margin: 2rem 0;
+}
+.additional-info {
+  margin: 3rem 0;
+}
+.pd-spec {
+  margin: 3rem 0;
+}
+.size-guide {
+  margin: 3rem 0;
 }
 
-.product-detail.trend {
-  min-height: 0 !important;
-  overflow: visible !important;
+/* Increase line-height for readability */
+.description p,
+.additional-info p,
+.features-list li {
+  line-height: 1.8;
 }
 
-/* existing styles below (retain previous trend styles) */
-/* ... */
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .product-detail.trend {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .product-gallery {
+    height: 60vh;
+  }
+  .product-info {
+    padding: 1rem;
+  }
+}
