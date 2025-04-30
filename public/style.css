@@ -13,3 +13,54 @@ section h2 { text-align: center; font-size: 2rem; margin-bottom: 1rem; }
 section .grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
 section .grid div { width: calc(33.333% - 1rem); text-align: center; }
 section .grid img { width: 100%; height: auto; border-radius: 0.5rem; }
+
+
+/* product-detail page */
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+.pd-image {
+  flex: 1 1 40%;
+}
+.pd-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.pd-info {
+  flex: 1 1 50%;
+}
+.pd-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.pd-info p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.pd-info ul {
+  list-style: disc inside;
+  margin-bottom: 1.5rem;
+}
+.pd-info li {
+  margin: 0.5rem 0;
+}
+.pd-actions .btn-primary,
+.pd-actions .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.btn-primary {
+  background: #000;
+  color: #fff;
+}
+.btn-secondary {
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
