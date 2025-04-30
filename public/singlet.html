@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RunSurround Singlet – Product Detail</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="singlet-trend.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUNAR 91 싱글렛 – Product Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="singlet-trend.css">
 </head>
 <body>
   <header class="header">
@@ -14,25 +14,42 @@
       <a href="index.html">Home</a> / <span>RUNAR 91 싱글렛</span>
     </nav>
   </header>
-
   <main class="product-detail trend">
-    <div class="product-gallery">
-      <div class="main-image">
-        <img src="assets/Singlet.png" alt="RUNAR 91 싱글렛" />
-      </div>
-    </div>
-    <div class="product-info">
+    <section class="product-gallery">
+      <img src="assets/Singlet.png" alt="RUNAR 91 싱글렛">
+    </section>
+    <section class="product-info">
       <h1>RUNAR 91 싱글렛</h1>
-      <p class="subtitle">Speed meets style</p>
-      <section class="description">
-        <p>RUNAR는 Runner를 빠르게 표기한 이름이며, 91은 R의 속도감을 상징합니다.</p>
-        <p>가벼운 착용감과 세련된 디자인이 만나 완성된 러닝 싱글렛을 경험해보세요.</p>
-        <ul class="features-list">
-          <li>혁신적인 메쉬 소재로 뛰어난 통기성 제공</li>
-          <li>슬림핏 디자인으로 뛰는 순간까지 깔끔한 실루엣 유지</li>
-          <li>가슴 왼쪽의 RUN + 미묘한 곡선 로고로 브랜드 아이덴티티 강조</li>
-          <li>부담 없는 무게감으로 장시간 러닝에도 최적화</li>
-        </ul>
+      <!-- BUY NOW 버튼을 제품 이름 바로 아래로 이동 -->
+      <div class="pd-actions">
+        <button class="btn-buy" id="buyBtn">BUY NOW</button>
+        <div class="size-select" id="sizeSelect">
+          <label><input type="radio" name="size" value="S"> S</label>
+          <label><input type="radio" name="size" value="M"> M</label>
+          <label><input type="radio" name="size" value="L"> L</label>
+          <label><input type="radio" name="size" value="XL"> XL</label>
+          <label><input type="radio" name="size" value="XXL"> XXL</label>
+          <button class="btn-primary">구매하기</button>
+        </div>
+      </div>
+      <p class="subtitle">SPEED MEETS STYLE</p>
+      <div class="description">
+        <p>RUNAR는 Runner를 빠르게 표기한 이름이며, <strong>91</strong>은 R의 속도감을 상징합니다.</p>
+        <p>초경량 메쉬 소재와 미니멀 디자인의 조화로, 러닝 퍼포먼스에 새로운 차원을 제공합니다.</p>
+      </div>
+      <ul class="features-list">
+        <li>혁신적인 메쉬 소재: 체온 조절 및 통기성 극대화</li>
+        <li>슬림핏 실루엣: 흔들림 없는 러닝 퍼포먼스</li>
+        <li>브랜드 아이덴티티: 가슴 왼쪽의 RUN+곡선 로고</li>
+        <li>경량 구성: 장시간 러닝에도 부담 없는 착용감</li>
+      </ul>
+      <section class="additional-info">
+        <h2>HOW IT WORKS</h2>
+        <p>최신 인체공학적 패턴으로 설계되어, 상체 움직임을 따라 유연하게 변형됩니다. 무게는 120g 이하로, 달리는 동안 신경 쓰임 없이 몸에 완벽히 밀착됩니다.</p>
+        <h2>STYLING TIPS</h2>
+        <p>심플한 블랙 컬러는 어떤 컬러의 하의와도 매치가 가능하며, 화이트 러닝화와 함께 코디하면 세련된 룩을 완성할 수 있습니다.</p>
+        <h2>CARE INSTRUCTIONS</h2>
+        <p>부드러운 미지근한 물에 단독 세탁을 권장합니다. 세탁 후 그늘에 평평하게 말려주세요. 다리미 사용은 피하세요.</p>
       </section>
       <table class="pd-spec">
         <tr><th>제조사</th><td>Run Surround</td></tr>
@@ -53,19 +70,12 @@
           </tbody>
         </table>
       </div>
-      <div class="pd-actions">
-        <div class="size-select">
-          <label><input type="radio" name="size" value="S" /> S</label>
-          <label><input type="radio" name="size" value="M" /> M</label>
-          <label><input type="radio" name="size" value="L" /> L</label>
-          <label><input type="radio" name="size" value="XL" /> XL</label>
-          <label><input type="radio" name="size" value="XXL" /> XXL</label>
-        </div>
-        <button class="btn-buy">BUY NOW</button>
-      </div>
-    </div>
+    </section>
   </main>
-
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('buyBtn').addEventListener('click', function(){
+      document.getElementById('sizeSelect').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
