@@ -1,0 +1,59 @@
+/* === singlet.css === */
+/* 제품 정보 테이블 */
+.pd-spec {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+.pd-spec th {
+  text-align: left;
+  padding: 0.5rem;
+  width: 30%;
+  background: #f9f9f9;
+}
+.pd-spec td {
+  padding: 0.5rem;
+}
+/* 사이즈 가이드 */
+.size-guide h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.size-guide table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.size-guide th,
+.size-guide td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+.size-guide thead {
+  background: #f0f0f0;
+}
+/* 사이즈 선택 버튼 */
+.size-select {
+  margin-bottom: 1rem;
+}
+.size-select label {
+  margin-right: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.size-select input[type="radio"] {
+  margin-right: 0.25rem;
+}
+/* 구매하기 버튼 */
+.btn-primary {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn-primary:hover {
+  background: #333;
+}
