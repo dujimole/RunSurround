@@ -4,43 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RunSurround Singlet – Product Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="singlet.css" />
+  <link rel="stylesheet" href="singlet-trend.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a> &gt; <span>Runar 91 싱글렛</span>
+  <header class="header">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> / <span>RUNAR 91 싱글렛</span>
     </nav>
   </header>
 
-  <main class="product-detail">
-    <div class="pd-image">
-      <img src="assets/Singlet.png" alt="Runar 91 싱글렛" />
+  <main class="product-detail trend">
+    <div class="product-gallery">
+      <div class="main-image">
+        <img src="assets/Singlet.png" alt="RUNAR 91 싱글렛" />
+      </div>
     </div>
-    <div class="pd-info">
-      <h1>Runar 91 싱글렛</h1>
-      <p>
-        <strong>Runar</strong>는 Runner를 빠르게 표기한 이름이며,<br>
-        <strong>91</strong>은 R의 속도감을 형상화한 숫자에서 영감을 받았습니다.<br>
-        러닝 퍼포먼스와 감성을 동시에 담은 싱글렛을 만나보세요.
-      </p>
+    <div class="product-info">
+      <h1>RUNAR 91 싱글렛</h1>
+      <p class="subtitle">Speed meets style</p>
+      <section class="description">
+        <p>RUNAR는 Runner를 빠르게 표기한 이름이며, 91은 R의 속도감을 상징합니다.</p>
+        <p>가벼운 착용감과 세련된 디자인이 만나 완성된 러닝 싱글렛을 경험해보세요.</p>
+        <ul class="features-list">
+          <li>혁신적인 메쉬 소재로 뛰어난 통기성 제공</li>
+          <li>슬림핏 디자인으로 뛰는 순간까지 깔끔한 실루엣 유지</li>
+          <li>가슴 왼쪽의 RUN + 미묘한 곡선 로고로 브랜드 아이덴티티 강조</li>
+          <li>부담 없는 무게감으로 장시간 러닝에도 최적화</li>
+        </ul>
+      </section>
       <table class="pd-spec">
         <tr><th>제조사</th><td>Run Surround</td></tr>
         <tr><th>브랜드</th><td>Run Surround</td></tr>
         <tr><th>원산지</th><td>한국</td></tr>
       </table>
       <div class="size-guide">
-        <h2>사이즈 가이드 (cm)</h2>
+        <h2>SIZE GUIDE (cm)</h2>
         <table>
           <thead>
-            <tr><th>사이즈</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th></tr>
+            <tr><th>Size</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th></tr>
           </thead>
           <tbody>
-            <tr><th>총장</th><td>65.0</td><td>67.0</td><td>69.0</td><td>71.0</td><td>72.0</td></tr>
-            <tr><th>어깨</th><td>35.0</td><td>37.0</td><td>39.0</td><td>41.0</td><td>43.0</td></tr>
-            <tr><th>가슴</th><td>45.0</td><td>47.5</td><td>50.0</td><td>52.5</td><td>55.0</td></tr>
-            <tr><th>밑단</th><td>46.0</td><td>48.5</td><td>51.0</td><td>53.5</td><td>56.0</td></tr>
+            <tr><th>Length</th><td>65.0</td><td>67.0</td><td>69.0</td><td>71.0</td><td>72.0</td></tr>
+            <tr><th>Shoulder</th><td>35.0</td><td>37.0</td><td>39.0</td><td>41.0</td><td>43.0</td></tr>
+            <tr><th>Chest</th><td>45.0</td><td>47.5</td><td>50.0</td><td>52.5</td><td>55.0</td></tr>
+            <tr><th>Hem</th><td>46.0</td><td>48.5</td><td>51.0</td><td>53.5</td><td>56.0</td></tr>
           </tbody>
         </table>
       </div>
@@ -52,7 +61,7 @@
           <label><input type="radio" name="size" value="XL" /> XL</label>
           <label><input type="radio" name="size" value="XXL" /> XXL</label>
         </div>
-        <button class="btn-primary">구매하기</button>
+        <button class="btn-buy">BUY NOW</button>
       </div>
     </div>
   </main>

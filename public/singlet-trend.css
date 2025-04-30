@@ -1,0 +1,29 @@
+/* singlet-trend.css - readability enhancements */
+.product-info .description {
+  margin-bottom: 1.5rem;
+}
+.product-info .description p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0.5rem 0;
+  color: #333;
+}
+.features-list {
+  list-style: disc inside;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+.features-list li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Subtitle adjust */
+.subtitle {
+  font-size: 0.875rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f05a28;
+  margin-bottom: 0.75rem;
+}
