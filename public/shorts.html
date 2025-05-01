@@ -1,62 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RUNAR 91 쇼츠</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="shorts-trend.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUNAR 91 쇼츠 – Product Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shorts-trend.css">
 </head>
-<body style="overflow-y:auto;">
-  <header>
-    <nav class="breadcrumb">
-      <a href="index.html">Home</a> / <span>RUNAR 91 쇼츠</span>
-    </nav>
-  </header>
-  <main class="product-detail trend">
-    <section class="product-gallery">
-      <img src="assets/Shorts.png" alt="RUNAR 91 쇼츠"/>
+<body>
+  <nav><a href="/">Home</a> / RUNAR 91 쇼츠</nav>
+  <main class="product-detail">
+    <section>
+      <img src="assets/shorts.png" alt="RUNAR 91 쇼츠">
     </section>
-    <section class="product-info">
+    <section>
       <h1>RUNAR 91 쇼츠</h1>
-      <p class="subtitle">SPEED MEETS FUNCTION</p>
-      <p>RUNAR 91 쇼츠는 러너를 위해 디자인된 블랙 미드-타이츠 쇼츠로, 스마트폰 수납용 지퍼 포켓과 경량 메쉬 소재를 특징으로 합니다.</p>
-      <ul>
-        <li>메쉬 원단: 뛰어난 통기성</li>
-        <li>지퍼 포켓: 후면 허리 부분</li>
-        <li>그래픽: 앞 'RUS', 뒤 'RUNAR 91'</li>
-        <li>미드-타이츠 기장: 무릎 위 5-7인치</li>
-      </ul>
-      <div class="actions">
-        <button id="buyBtn">BUY NOW</button>
-        <div id="sizeSelect" style="display:none;">
-          <label><input type="radio" name="size">S</label>
-          <label><input type="radio" name="size">M</label>
-          <label><input type="radio" name="size">L</label>
-          <label><input type="radio" name="size">XL</label>
-          <label><input type="radio" name="size">XXL</label>
-          <button>구매하기</button>
-        </div>
+      <button id="buyBtn">BUY NOW</button>
+      <div id="sizeSelect">
+        <label><input type="radio" name="size" value="S"> S</label>
+        <label><input type="radio" name="size" value="M"> M</label>
+        <label><input type="radio" name="size" value="L"> L</label>
+        <label><input type="radio" name="size" value="XL"> XL</label>
+        <label><input type="radio" name="size" value="XXL"> XXL</label>
+        <button>구매하기</button>
       </div>
-      <table>
-        <tr><th>제조사</th><td>Run Surround</td></tr>
-        <tr><th>브랜드</th><td>Run Surround</td></tr>
-        <tr><th>원산지</th><td>한국</td></tr>
-      </table>
-      <h2>Size Guide (cm)</h2>
+      <p>RUNAR 91 쇼츠는 러너를 위해 디자인된 블랙 미드-타이츠 쇼츠로, 가벼운 메쉬 소재와 지퍼 포켓을 장착했습니다.</p>
+      <ul>
+        <li>메쉬 원단: 통기성 강화</li>
+        <li>지퍼 포켓: 스마트폰 수납 가능</li>
+        <li>브랜드 로고: 앞쪽 ‘RUS’, 뒤쪽 ‘RUNAR 91’</li>
+      </ul>
+      <h2>SIZE GUIDE (cm)</h2>
       <table>
         <tr><th>Size</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th></tr>
-        <tr><td>총장</td><td>43</td><td>45</td><td>47</td><td>49</td><td>51</td></tr>
-        <tr><td>허리</td><td>70</td><td>74</td><td>78</td><td>82</td><td>86</td></tr>
-        <tr><td>힙</td><td>92</td><td>96</td><td>100</td><td>104</td><td>108</td></tr>
+        <tr><td>총장</td><td>43.0</td><td>45.0</td><td>47.0</td><td>49.0</td><td>51.0</td></tr>
+        <tr><td>허리</td><td>70.0</td><td>74.0</td><td>78.0</td><td>82.0</td><td>86.0</td></tr>
+        <tr><td>힙</td><td>92.0</td><td>96.0</td><td>100.0</td><td>104.0</td><td>108.0</td></tr>
       </table>
     </section>
   </main>
   <script>
-    document.getElementById('buyBtn').onclick = ()=> {
-      const sel = document.getElementById('sizeSelect');
-      sel.style.display = sel.style.display === 'none' ? 'block' : 'none';
-    };
+    document.getElementById('buyBtn').addEventListener('click', () => {
+      document.getElementById('sizeSelect').classList.toggle('active');
+    });
   </script>
 </body>
 </html>
