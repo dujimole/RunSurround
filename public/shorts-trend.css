@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap');
 
-html, body { margin:0; padding:0; background:#f7f7f7; font-family:'Poppins', sans-serif; }
+html, body { margin:0; padding:0; overflow-x:hidden; overflow-y:auto; background:#f7f7f7; font-family:'Poppins', sans-serif; }
 .product-detail.trend { max-width:1024px; margin:2rem auto; padding:2rem; background:#fff; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.05);}
 .product-gallery img { width:100%; border-radius:12px; }
 .product-info { margin-top:2rem; }
