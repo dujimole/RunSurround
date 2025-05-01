@@ -1,49 +1,21 @@
-/* singlet-trend.css - fix scrolling issue */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap');
-
-/* Re-enable body scrolling */
-html, body {
-  height: auto !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove full viewport forcing on gallery */
-.product-gallery {
-  height: auto !important;
-  overflow: visible !important;
-}
-
-/* Adjust image for responsive view without overflow */
-.product-gallery img {
-  width: 100%;
-  height: auto !important;
-  object-fit: contain;
-}
-
-/* Retain rest of trend styles */
-/* Section spacing */
-.product-detail.trend {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 1024px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
-  font-family: 'Poppins', sans-serif;
-}
-/* ... (rest of styles) ... */
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .product-detail.trend {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  .product-info {
-    padding: 1rem;
-  }
-}
+html, body { margin:0; padding:0; font-family:'Poppins',sans-serif; background:#f7f7f7; }
+.product-detail.trend { max-width:1024px; margin:2rem auto; padding:2rem; background:#fff; border-radius:12px; overflow-y:auto; display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+.product-gallery img { width:100%; border-radius:12px; }
+.product-info h1 { font-family:'Montserrat',sans-serif; font-size:2.5rem; font-weight:900; margin-bottom:0.5rem; }
+.subtitle { text-transform:uppercase; color:#f05a28; font-weight:600; margin-bottom:1rem; }
+.description p { margin-bottom:1rem; line-height:1.8; }
+.features-list { list-style:disc inside; margin-bottom:1.5rem; }
+.features-list li { margin-bottom:0.75rem; font-weight:600; }
+.additional-info h2 { font-family:'Montserrat',sans-serif; font-size:1.25rem; font-weight:700; margin-top:1.5rem; margin-bottom:0.5rem; }
+.additional-info p { margin-bottom:1rem; line-height:1.8; }
+.pd-actions { margin:2rem 0; display:flex; flex-direction:column; }
+.btn-buy { align-self:start; background:linear-gradient(90deg,#f05a28,#ffba00); color:#fff; border:none; padding:0.75rem 1.5rem; border-radius:30px; font-weight:700; cursor:pointer; margin-bottom:1rem; }
+.size-select { display:none; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem; }
+.size-select.active { display:flex; }
+.size-select label { background:#f7f7f7; padding:0.5rem 1rem; border-radius:6px; cursor:pointer; font-weight:600; }
+.size-select .btn-primary { margin-left:auto; background:#000; color:#fff; padding:0.5rem 1rem; border:none; border-radius:6px; cursor:pointer; }
+.pd-spec, .size-guide table { width:100%; border-collapse:collapse; margin:1.5rem 0; }
+.pd-spec th, .pd-spec td, .size-guide th, .size-guide td { padding:0.75rem; border:1px solid #eee; }
+.pd-spec th, .size-guide th { background:#fafafa; text-transform:uppercase; font-size:0.85rem; }
+@media(max-width:768px){ .product-detail.trend{grid-template-columns:1fr;} }
