@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUNAR 91 쇼츠 – Product Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shorts-trend.css">
+</head>
+<body>
+  <header>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> / <span>RUNAR 91 쇼츠</span>
+    </nav>
+  </header>
+  <main class="product-detail trend">
+    <section class="product-gallery">
+      <img src="../assets/shorts.png" alt="RUNAR 91 쇼츠">
+    </section>
+    <section class="product-info">
+      <h1>RUNAR 91 쇼츠</h1>
+      <div class="pd-actions">
+        <button class="btn-buy" id="buyBtn">BUY NOW</button>
+        <div class="size-select" id="sizeSelect">
+          <label><input type="radio" name="size" value="S"> S</label>
+          <label><input type="radio" name="size" value="M"> M</label>
+          <label><input type="radio" name="size" value="L"> L</label>
+          <label><input type="radio" name="size" value="XL"> XL</label>
+          <label><input type="radio" name="size" value="XXL"> XXL</label>
+          <button class="btn-primary">구매하기</button>
+        </div>
+      </div>
+      <p class="subtitle">SPEED MEETS FUNCTION</p>
+      <div class="description">
+        <p>RUNAR 91 쇼츠는 러너를 위해 디자인된 블랙 미드-타이츠 쇼츠로, 가벼운 메쉬 소재와 기능성 지퍼 포켓을 결합했습니다.</p>
+      </div>
+      <ul class="features-list">
+        <li>메쉬 원단: 통기성 및 쾌적함 극대화</li>
+        <li>지퍼 포켓: 스마트폰 수납 가능</li>
+        <li>브랜드 아이덴티티: 앞쪽 ‘RUS’, 뒤쪽 ‘RUNAR 91’</li>
+        <li>미드-타이츠 길이: 무릎 위 5~7인치</li>
+      </ul>
+      <section class="additional-info">
+        <h2>HOW IT WORKS</h2>
+        <p>인체공학적 패턴으로 설계되어, 상체 이동 중에도 편안하며, 초경량(약 120g 이하)으로 러닝에 방해가 없습니다.</p>
+        <h2>STYLING TIPS</h2>
+        <p>어떤 톤의 러닝 탑과도 조화로운 블랙 컬러. 밝은 색상의 상의와 대비를 주어 스타일에 포인트를 더해 보세요.</p>
+        <h2>CARE INSTRUCTIONS</h2>
+        <p>미지근한 물에 단독 손세탁 후 그늘에 평평하게 말려주십시오. 다리미 사용은 피하세요.</p>
+      </section>
+      <table class="pd-spec">
+        <tr><th>제조사</th><td>Run Surround</td></tr>
+        <tr><th>브랜드</th><td>Run Surround</td></tr>
+        <tr><th>원산지</th><td>한국</td></tr>
+      </table>
+      <div class="size-guide">
+        <h2>SIZE GUIDE (cm)</h2>
+        <table>
+          <thead>
+            <tr><th>Size</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>총장</th><td>43</td><td>45</td><td>47</td><td>49</td><td>51</td></tr>
+            <tr><th>허리</th><td>70</td><td>74</td><td>78</td><td>82</td><td>86</td></tr>
+            <tr><th>힙</th><td>92</td><td>96</td><td>100</td><td>104</td><td>108</td></tr>
+            <tr><th>밑단</th><td>50</td><td>52</td><td>54</td><td>56</td><td>58</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.getElementById('buyBtn').addEventListener('click', function(){
+      document.getElementById('sizeSelect').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
