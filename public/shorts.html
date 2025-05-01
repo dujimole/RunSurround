@@ -5,42 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RUNAR 91 쇼츠 – Product Detail</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="shorts-trend.css">
 </head>
 <body>
-  <nav><a href="/">Home</a> / RUNAR 91 쇼츠</nav>
-  <main class="product-detail">
-    <section>
+  <header>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> / <span>RUNAR 91 쇼츠</span>
+    </nav>
+  </header>
+  <main class="product-detail trend">
+    <section class="product-gallery">
       <img src="assets/shorts.png" alt="RUNAR 91 쇼츠">
     </section>
-    <section>
+    <section class="product-info">
       <h1>RUNAR 91 쇼츠</h1>
-      <button id="buyBtn">BUY NOW</button>
-      <div id="sizeSelect">
-        <label><input type="radio" name="size" value="S"> S</label>
-        <label><input type="radio" name="size" value="M"> M</label>
-        <label><input type="radio" name="size" value="L"> L</label>
-        <label><input type="radio" name="size" value="XL"> XL</label>
-        <label><input type="radio" name="size" value="XXL"> XXL</label>
-        <button>구매하기</button>
+      <p class="subtitle">SPEED MEETS FUNCTION</p>
+      <div class="description">
+        <p>RUNAR 91 쇼츠는 러너를 위해 디자인된 블랙 미드-타이츠 쇼츠로, 가벼운 메쉬 소재와 스마트폰 수납용 지퍼 포켓을 결합했습니다.</p>
       </div>
-      <p>RUNAR 91 쇼츠는 러너를 위해 디자인된 블랙 미드-타이츠 쇼츠로, 가벼운 메쉬 소재와 지퍼 포켓을 장착했습니다.</p>
-      <ul>
-        <li>메쉬 원단: 통기성 강화</li>
-        <li>지퍼 포켓: 스마트폰 수납 가능</li>
-        <li>브랜드 로고: 앞쪽 ‘RUS’, 뒤쪽 ‘RUNAR 91’</li>
+      <ul class="features-list">
+        <li>메쉬 원단: 뛰어난 통기성과 경량성</li>
+        <li>지퍼 포켓: 후면 허리 부분에 스마트폰 수납 가능</li>
+        <li>브랜드 아이덴티티: 앞쪽 'RUS' 로고와 뒤쪽 'RUNAR 91' 그래픽</li>
+        <li>미드-타이츠 기장: 무릎 위 5-7인치</li>
       </ul>
-      <h2>SIZE GUIDE (cm)</h2>
-      <table>
-        <tr><th>Size</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th></tr>
-        <tr><td>총장</td><td>43.0</td><td>45.0</td><td>47.0</td><td>49.0</td><td>51.0</td></tr>
-        <tr><td>허리</td><td>70.0</td><td>74.0</td><td>78.0</td><td>82.0</td><td>86.0</td></tr>
-        <tr><td>힙</td><td>92.0</td><td>96.0</td><td>100.0</td><td>104.0</td><td>108.0</td></tr>
+      <div class="pd-actions">
+        <button class="btn-buy" id="buyBtn">BUY NOW</button>
+        <div class="size-select" id="sizeSelect">
+          <label><input type="radio" name="size" value="S"> S</label>
+          <label><input type="radio" name="size" value="M"> M</label>
+          <label><input type="radio" name="size" value="L"> L</label>
+          <label><input type="radio" name="size" value="XL"> XL</label>
+          <label><input type="radio" name="size" value="XXL"> XXL</label>
+          <button class="btn-primary">구매하기</button>
+        </div>
+      </div>
+      <table class="pd-spec">
+        <tr><th>제조사</th><td>Run Surround</td></tr>
+        <tr><th>브랜드</th><td>Run Surround</td></tr>
+        <tr><th>원산지</th><td>한국</td></tr>
       </table>
-    </section>
+      <div class="size-guide">
+        <h2>SIZE GUIDE (cm)</h2>
+        <table>
+          <thead>
+            <tr><th>Size</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>총장</th><td>43.0</td><td>45.0</td><td>47.0</td><td>49.0</td><td>51.0</td></tr>
+            <tr><th>허리</th><td>70.0</td><td>74.0</td><td>78.0</td><td>82.0</td><td>86.0</td></tr>
+            <tr><th>힙</th><td>92.0</td><td>96.0</td><td>100.0</td><td>104.0</td><td>108.0</td></tr>
+          </tbody>
+        </table>
+      </div>
   </main>
   <script>
-    document.getElementById('buyBtn').addEventListener('click', () => {
+    document.getElementById('buyBtn').addEventListener('click', function() {
       document.getElementById('sizeSelect').classList.toggle('active');
     });
   </script>

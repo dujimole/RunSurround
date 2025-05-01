@@ -1,9 +1,98 @@
-body { font-family: 'Poppins', sans-serif; margin:0; padding:1rem; background:#f7f7f7; }
-.product-detail { max-width:800px; margin:0 auto; }
-.product-detail img { width:100%; border-radius:8px; }
-h1 { font-family:'Montserrat', sans-serif; font-size:2rem; margin:1rem 0; }
-#sizeSelect { display:none; margin:1rem 0; }
-#sizeSelect.active { display:block; }
-#buyBtn { padding:0.75rem 1.5rem; background:#000; color:#fff; border:none; border-radius:4px; cursor:pointer; }
-table { width:100%; border-collapse:collapse; margin:1.5rem 0; }
-th, td { border:1px solid #ddd; padding:0.5rem; text-align:center; }
+/* shorts-trend.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+}
+.product-detail.trend {
+  max-width: 1024px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.product-gallery img {
+  width: 100%;
+  border-radius: 12px;
+}
+.product-info {
+  margin-top: 2rem;
+}
+.product-info h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+.subtitle {
+  text-transform: uppercase;
+  color: #f05a28;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.description p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.features-list {
+  list-style: disc inside;
+  margin-bottom: 1.5rem;
+}
+.features-list li {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+.pd-actions {
+  margin-bottom: 2rem;
+}
+.btn-buy {
+  background: linear-gradient(90deg, #f05a28, #ffba00);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.size-select {
+  display: none;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.size-select.active {
+  display: flex;
+}
+.size-select label {
+  background: #f7f7f7;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.size-select .btn-primary {
+  margin-left: auto;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+.pd-spec, .size-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+.pd-spec th, .pd-spec td, .size-guide th, .size-guide td {
+  padding: 0.75rem;
+  border: 1px solid #eee;
+}
+.pd-spec th, .size-guide th {
+  background: #fafafa;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
