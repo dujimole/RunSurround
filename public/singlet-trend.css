@@ -1,14 +1,49 @@
-/* singlet-trend.css - Scroll Fix Overrides */
+/* singlet-trend.css - fix scrolling issue */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap');
+
+/* Re-enable body scrolling */
 html, body {
   height: auto !important;
-  overflow-x: hidden !important;
   overflow-y: auto !important;
+  overflow-x: hidden !important;
   margin: 0;
   padding: 0;
 }
-.product-detail.trend {
-  min-height: auto !important;
+
+/* Remove full viewport forcing on gallery */
+.product-gallery {
+  height: auto !important;
   overflow: visible !important;
 }
-/* Include your existing trend styles below */
-/* ... */
+
+/* Adjust image for responsive view without overflow */
+.product-gallery img {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* Retain rest of trend styles */
+/* Section spacing */
+.product-detail.trend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1024px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+  font-family: 'Poppins', sans-serif;
+}
+/* ... (rest of styles) ... */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-detail.trend {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .product-info {
+    padding: 1rem;
+  }
+}
