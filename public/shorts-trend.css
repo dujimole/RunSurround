@@ -1,15 +1,16 @@
-/* shorts-trend.css - Scroll Fix */
+/* shorts-trend.css - Horizontal Scroll Fix */
 html, body {
-  height: auto !important;
+  overflow-x: auto !important;
   overflow-y: auto !important;
   margin: 0;
   padding: 0;
 }
 .product-detail.trend {
-  overflow: visible !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
 }
 
-/* Existing styles below */
+/* Existing styles: */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap');
 .product-detail.trend {
   max-width: 1024px;
