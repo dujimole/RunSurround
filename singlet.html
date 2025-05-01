@@ -1,81 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RUNAR 91 싱글렛 – Product Detail</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="singlet-trend.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RunSurround Singlet – Product Detail</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <nav class="breadcrumb">
-      <a href="index.html">Home</a> / <span>RUNAR 91 싱글렛</span>
+  <header>
+    <nav>
+      <a href="index.html">Home</a> &gt; <span>Singlet</span>
     </nav>
   </header>
-  <main class="product-detail trend">
-    <section class="product-gallery">
-      <img src="assets/Singlet.png" alt="RUNAR 91 싱글렛">
-    </section>
-    <section class="product-info">
-      <h1>RUNAR 91 싱글렛</h1>
-      <!-- BUY NOW 버튼을 제품 이름 바로 아래로 이동 -->
-      <div class="pd-actions">
-        <button class="btn-buy" id="buyBtn">BUY NOW</button>
-        <div class="size-select" id="sizeSelect">
-          <label><input type="radio" name="size" value="S"> S</label>
-          <label><input type="radio" name="size" value="M"> M</label>
-          <label><input type="radio" name="size" value="L"> L</label>
-          <label><input type="radio" name="size" value="XL"> XL</label>
-          <label><input type="radio" name="size" value="XXL"> XXL</label>
-          <button class="btn-primary">구매하기</button>
-        </div>
-      </div>
-      <p class="subtitle">SPEED MEETS STYLE</p>
-      <div class="description">
-        <p>RUNAR는 Runner를 빠르게 표기한 이름이며, <strong>91</strong>은 R의 속도감을 상징합니다.</p>
-        <p>초경량 메쉬 소재와 미니멀 디자인의 조화로, 러닝 퍼포먼스에 새로운 차원을 제공합니다.</p>
-      </div>
-      <ul class="features-list">
-        <li>혁신적인 메쉬 소재: 체온 조절 및 통기성 극대화</li>
-        <li>슬림핏 실루엣: 흔들림 없는 러닝 퍼포먼스</li>
-        <li>브랜드 아이덴티티: 가슴 왼쪽의 RUN+곡선 로고</li>
-        <li>경량 구성: 장시간 러닝에도 부담 없는 착용감</li>
+
+  <main class="product-detail">
+    <!-- 제품 이미지 -->
+    <div class="pd-image">
+      <img src="assets/Singlet.png" alt="RunSurround Singlet" />
+    </div>
+
+    <!-- 제품 정보 -->
+    <div class="pd-info">
+      <h1>RunSurround Singlet</h1>
+      <p>최적의 통기성과 가벼움을 위해 디자인된 러닝용 민소매 싱글렛입니다. <br>
+      ‘run’ 로고와 미묘한 곡선 미소가 어깨에 흐르는 에너지를 표현합니다.</p>
+      <ul>
+        <li><strong>소재</strong>: 메쉬 기능성 원단 (통기성 우수)</li>
+        <li><strong>핏</strong>: 러너 실루엣에 최적화된 슬림 핏</li>
+        <li><strong>컬러</strong>: 블랙 베이스 + 화이트 프린트</li>
+        <li><strong>사이즈</strong>: S, M, L, XL</li>
       </ul>
-      <section class="additional-info">
-        <h2>HOW IT WORKS</h2>
-        <p>최신 인체공학적 패턴으로 설계되어, 상체 움직임을 따라 유연하게 변형됩니다. 무게는 120g 이하로, 달리는 동안 신경 쓰임 없이 몸에 완벽히 밀착됩니다.</p>
-        <h2>STYLING TIPS</h2>
-        <p>심플한 블랙 컬러는 어떤 컬러의 하의와도 매치가 가능하며, 화이트 러닝화와 함께 코디하면 세련된 룩을 완성할 수 있습니다.</p>
-        <h2>CARE INSTRUCTIONS</h2>
-        <p>부드러운 미지근한 물에 단독 세탁을 권장합니다. 세탁 후 그늘에 평평하게 말려주세요. 다리미 사용은 피하세요.</p>
-      </section>
-      <table class="pd-spec">
-        <tr><th>제조사</th><td>Run Surround</td></tr>
-        <tr><th>브랜드</th><td>Run Surround</td></tr>
-        <tr><th>원산지</th><td>한국</td></tr>
-      </table>
-      <div class="size-guide">
-        <h2>SIZE GUIDE (cm)</h2>
-        <table>
-          <thead>
-            <tr><th>Size</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th></tr>
-          </thead>
-          <tbody>
-            <tr><th>Length</th><td>65.0</td><td>67.0</td><td>69.0</td><td>71.0</td><td>72.0</td></tr>
-            <tr><th>Shoulder</th><td>35.0</td><td>37.0</td><td>39.0</td><td>41.0</td><td>43.0</td></tr>
-            <tr><th>Chest</th><td>45.0</td><td>47.5</td><td>50.0</td><td>52.5</td><td>55.0</td></tr>
-            <tr><th>Hem</th><td>46.0</td><td>48.5</td><td>51.0</td><td>53.5</td><td>56.0</td></tr>
-          </tbody>
-        </table>
+      <div class="pd-actions">
+        <button class="btn-primary">장바구니에 담기</button>
+        <button class="btn-secondary">문의하기</button>
       </div>
-    </section>
-  </main>
-  <script>
-    document.getElementById('buyBtn').addEventListener('click', function(){
-      document.getElementById('sizeSelect').classList.toggle('active');
-    });
-  </script>
+    </main>
+  <script src="script.js"></script>
 </body>
 </html>
