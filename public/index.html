@@ -2,60 +2,42 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Run Surround</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Run Surround</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="intro">
-    <img src="assets/intro-bg.png" alt="Intro Background" class="intro-bg"/>
-    <div class="intro-text" style="position:absolute; top:3vh; left:50%; transform:translateX(-50%); text-align:center; z-index:10;">
-      <h1 style="font-size:4rem; color:#fff; text-shadow:0 2px 10px rgba(0,0,0,0.7); line-height:1.2; margin:0;">Run<br>Surround?</h1>
-      <button id="startBtn" style="margin-top:1.5rem; font-size:1.5rem; background:rgba(255,255,255,0.2); border:2px solid #fff; color:#fff; padding:0.5rem 1.5rem; border-radius:0.5rem; cursor:pointer;">YES</button>
-    </div>
-  </div>
-
-  <video id="introVideo" src="assets/run_intro.mp4" muted playsinline></video>
-
-  <div id="main">
-    <header class="banner">
-      <h1>Run Surround and Free</h1>
+    <header>
+        <h1>Run Surround</h1>
     </header>
-    <section class="surround-moments">
-      <h2>Surround Moments</h2>
-      <div class="grid">
-        <div><img src="assets/Tokyo_City_Run.png" alt="Tokyo City Run"/><p>Tokyo City Run</p></div>
-        <div><img src="assets/Seoul_City_Run.png" alt="Seoul City Run"/><p>Seoul City Run</p></div>
-        <div><img src="assets/Swiss_Alps_Trail.png" alt="Swiss Alps Trail"/><p>Swiss Alps Trail</p></div>
-      </div>
-    </section>
-    
-    <section class="lookbook">
-      <h2>Lookbook</h2>
-      <div class="grid">
-        <div>
-          <a href="singlet.html">
-            <img src="assets/Singlet.png" alt="RUNAR 91 싱글렛"/>
-            <p>RUNAR 91 싱글렛</p>
-          </a>
-        </div>
-        <div>
-          <a href="shorts.html">
-            <img src="assets/Shorts.png" alt="RUNAR 91 쇼츠"/>
-            <p>RUNAR 91 쇼츠</p>
-          </a>
-        </div>
-        <div>
-          <a href="tshirt.html">
-            <img src="assets/Tshirt.png" alt="Run every 티셔츠"/>
-            <p>Run every 티셔츠</p>
-          </a>
-        </div>
-      </div>
-    </section>
-  </div>
 
-  <script src="script.js"></script>
+    <!-- New Banner Section -->
+    <section class="journey-banner">
+        <a href="journey.html">
+            <img src="public/The Journey ‘Run Surround.png" alt="The Journey Run Surround" style="width:100%;height:auto;">
+        </a>
+        <div class="journey-button" style="text-align:center; margin-top:20px;">
+            <a href="journey.html" class="button">The Journey 'Run Surround'</a>
+        </div>
+    </section>
+
+    <!-- Lookbook Section -->
+    <section class="lookbook">
+        <h2>Lookbook</h2>
+        <div class="products">
+            <div>
+                <a href="singlet.html"><img src="public/singlet.png" alt="RUNAR 91 싱글렛"></a>
+                <p><a href="singlet.html">RUNAR 91 싱글렛</a></p>
+            </div>
+            <div>
+                <a href="shorts.html"><img src="public/shorts.png" alt="RUNAR 91 쇼츠"></a>
+                <p><a href="shorts.html">RUNAR 91 쇼츠</a></p>
+            </div>
+            <div>
+                <a href="tshirt.html"><img src="public/tshirts.png" alt="Run every 티셔츠"></a>
+                <p><a href="tshirt.html">Run every 티셔츠</a></p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
