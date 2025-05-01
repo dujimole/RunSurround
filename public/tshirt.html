@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Run every 티셔츠 – Product Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shorts-trend.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> / <span>Run every 티셔츠</span>
+    </nav>
+  </header>
+  <main class="product-detail trend">
+    <section class="product-gallery">
+      <img src="assets/Tshirt.png" alt="Run every 티셔츠">
+    </section>
+    <section class="product-info">
+      <h1>Run every 티셔츠</h1>
+      <p class="subtitle">BREATHABLE. LIGHT. FAST.</p>
+      <div class="description">
+        <p>Run every 티셔츠는 러닝의 본질에 집중할 수 있도록 설계된 초경량 기능성 티셔츠입니다. 빠른 땀 배출과 통기성으로 최상의 쾌적함을 제공하며, 깔끔한 디자인과 절제된 디테일은 러너의 움직임을 완벽히 지원합니다.</p>
+      </div>
+      <ul class="features-list">
+        <li>흡습속건 기능의 초경량 폴리에스터 원단</li>
+        <li>라글란 소매 디자인으로 자연스러운 움직임</li>
+        <li>왼쪽 가슴 로고 & 등판 러너 그래픽 포인트</li>
+        <li>일상 & 트레이닝 모두 활용 가능한 핏</li>
+      </ul>
+      <section class="additional-info">
+        <h2>HOW IT WORKS</h2>
+        <p>인체공학적 패턴과 고기능성 소재가 결합되어 장거리 러닝에도 편안함을 제공합니다. 체온을 빠르게 조절해 러닝 퍼포먼스를 유지시켜 줍니다.</p>
+        <h2>STYLING TIPS</h2>
+        <p>블랙 컬러와 미니멀한 디자인으로 다양한 러닝 쇼츠 및 타이츠와 매치하기 좋습니다.</p>
+        <h2>CARE INSTRUCTIONS</h2>
+        <p>찬물 세탁 / 표백제 금지 / 저온 건조 / 다림질 금지</p>
+      </section>
+      <div class="pd-actions">
+        <button class="btn-buy" id="buyBtn">BUY NOW</button>
+        <div class="size-select" id="sizeSelect">
+          <label><input type="radio" name="size" value="S"> S</label>
+          <label><input type="radio" name="size" value="M"> M</label>
+          <label><input type="radio" name="size" value="L"> L</label>
+          <label><input type="radio" name="size" value="XL"> XL</label>
+          <label><input type="radio" name="size" value="XXL"> XXL</label>
+          <button class="btn-primary">BUY NOW</button>
+        </div>
+      </div>
+      <table class="pd-spec">
+        <tr><th>제조사</th><td>Run Surround</td></tr>
+        <tr><th>브랜드</th><td>Run Surround</td></tr>
+        <tr><th>원산지</th><td>한국</td></tr>
+      </table>
+      <div class="size-guide">
+        <h2>SIZE GUIDE (cm)</h2>
+        <table>
+          <thead>
+            <tr><th>Size</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>XXL</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>총장</th><td>66</td><td>68</td><td>70</td><td>72</td><td>74</td></tr>
+            <tr><th>가슴 단면</th><td>48</td><td>50</td><td>52</td><td>54</td><td>56</td></tr>
+            <tr><th>소매 길이</th><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.getElementById("buyBtn").addEventListener("click", function(){
+      document.getElementById("sizeSelect").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
