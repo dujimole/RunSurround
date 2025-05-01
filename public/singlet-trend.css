@@ -1,30 +1,13 @@
-/* singlet-trend.css - fix scrolling issue */
+/* singlet-trend.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap');
 
-/* Re-enable body scrolling */
 html, body {
-  height: auto !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
+  background: linear-gradient(180deg, #fcfcfc 0%, #f0f0f0 100%);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
-
-/* Remove full viewport forcing on gallery */
-.product-gallery {
-  height: auto !important;
-  overflow: visible !important;
-}
-
-/* Adjust image for responsive view without overflow */
-.product-gallery img {
-  width: 100%;
-  height: auto !important;
-  object-fit: contain;
-}
-
-/* Retain rest of trend styles */
-/* Section spacing */
 .product-detail.trend {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -32,12 +15,120 @@ html, body {
   max-width: 1024px;
   margin: 2rem auto;
   padding: 2rem;
-  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
-  font-family: 'Poppins', sans-serif;
 }
-/* ... (rest of styles) ... */
-
-/* Responsive adjustments */
+.product-gallery img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.product-info {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.product-info h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #f05a28;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.description p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin: 0.75rem 0;
+  color: #444;
+}
+.features-list {
+  list-style: disc inside;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+.features-list li {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.additional-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.additional-info p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.btn-buy {
+  background: linear-gradient(90deg, #f05a28, #ffba00);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: transform .3s, opacity .3s;
+}
+.btn-buy:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.size-select {
+  display: none;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.size-select.active {
+  display: flex;
+}
+.size-select label {
+  background: #f7f7f7;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.size-select input[type="radio"] {
+  margin-right: 0.25rem;
+}
+.size-select .btn-primary {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-left: auto;
+  font-size: 1rem;
+}
+.pd-spec, .size-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+.pd-spec th, .pd-spec td, .size-guide th, .size-guide td {
+  padding: 0.75rem;
+  border: 1px solid #eee;
+}
+.pd-spec th, .size-guide th {
+  background: #fafafa;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #666;
+}
 @media (max-width: 768px) {
   .product-detail.trend {
     grid-template-columns: 1fr;
