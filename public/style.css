@@ -1,19 +1,17 @@
-
-
-/* Lookbook card enhancements */
-.lookbook .grid div {
-  text-align: center;
+/* style.css – 이미지 비율 고정 및 과도한 확대 방지 */
+header.banner {
+  height: 40vh;                  /* 배너 높이 조정 */
+  background-size: cover;
 }
-.lookbook .grid a {
-  display: block;
-  padding: 1rem;
-  transition: transform 0.2s;
+.journey-banner-img {
+  max-width: 90%;
+  max-height: 200px;             /* 배너 이미지 최대 높이 지정 */
+  width: auto;
+  height: auto;
+  margin: 0 auto;
 }
-.lookbook .grid a:hover {
-  transform: scale(1.05);
-}
-.lookbook .grid p {
-  font-size: 1.25rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
+.lookbook .grid img {
+  max-width: 100%;
+  height: auto;                  /* lookbook 이미지 비율 유지 */
+  object-fit: cover;
 }
