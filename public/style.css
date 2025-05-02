@@ -45,3 +45,10 @@ section h2 { text-align: center; font-size: 2rem; margin-bottom: 1rem; }
   .journey-banner img { max-width: 100%; }
   .lookbook .grid div { width: 60%; }
 }
+/*  ──────────────────────────────────────
+    The Journey 버튼과 배너 사이 간격 조정
+────────────────────────────────────── */
+.journey-button {
+  display: block;
+  margin: 1.5rem auto;  /* 버튼 위·아래 1.5rem 여백 */
+}
