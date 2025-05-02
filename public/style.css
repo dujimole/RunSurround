@@ -1,23 +1,42 @@
-* { margin:0; padding:0; box-sizing:border-box; }
-body, html { width:100%; height:100%; overflow-x:hidden; font-family:'Poppins',sans-serif; }
-#intro { position:fixed; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; z-index:100; }
-.intro-bg, #introVideo { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; }
-.intro-bg { filter:brightness(0.5); }
-.intro-text { position:relative; color:#fff; text-align:center; }
-header.banner { width:100%; height:60vh; background:url('assets/home-bg.png') center/cover no-repeat; display:flex; align-items:center; justify-content:center; }
-header.banner h1 { font-size:4vw; color:#fff; text-shadow:0 0 10px rgba(0,0,0,0.7); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { width: 100%; height: 100%; overflow: hidden; font-family: sans-serif; }
+#intro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 100; }
+.intro-bg { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+.intro-text { position: relative; color: #fff; font-size: 6vw; text-align: center; }
+#startBtn { margin-top: 1rem; font-size: 3vw; padding: 0.5rem 2rem; opacity: 0.8; background: none; border: 2px solid #fff; color: #fff; cursor: pointer; }
+#introVideo { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+#main { display: none; width: 100%; height: 100%; overflow-y: auto; }
+header.banner { width: 100%; height: 60vh; background: url('assets/home-bg.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+header.banner h1 { font-size: 4vw; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.7); }
+section { padding: 2rem; background: #fff; }
+section h2 { text-align: center; font-size: 2rem; margin-bottom: 1rem; }
+section .grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
+section .grid div { width: calc(33.333% - 1rem); text-align: center; }
+section .grid img { width: 100%; height: auto; border-radius: 0.5rem; }
 
-section.journey { text-align:center; padding:2rem 1rem; background:#fff; }
-.journey-banner { width:90%; max-width:800px; height:auto; object-fit:cover; margin:0 auto 1rem; border-radius:12px; }
-.btn-journey { display:inline-block; padding:0.75rem 2rem; background:#f05a28; color:#fff; font-weight:700; border-radius:30px; text-decoration:none; transition:background 0.3s; }
-.btn-journey:hover { background:#d35400; }
+/* Journey Banner */
+.journey-banner img { width: 100%; height: auto; border-radius: 12px; margin: 2rem 0; }
+.journey-cta { text-align: center; margin-bottom: 2rem; }
+.journey-cta a { display: inline-block; padding: 0.75rem 1.5rem; background: #f05a28; color: #fff; border-radius: 30px; font-weight: 700; text-decoration: none; font-size: 1rem; }
 
-section.lookbook { background:#f7f7f7; padding:2rem 1rem; }
-section.lookbook h2 { text-align:center; font-size:2rem; margin-bottom:1rem; }
-section.lookbook .grid { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; }
-section.lookbook .grid div { flex:1 1 calc(30% - 1rem); max-width:calc(30% - 1rem); text-align:center; }
-section.lookbook .grid img { width:100%; height:auto; border-radius:8px; object-fit:cover; }
-section.lookbook .grid p { font-family:'Montserrat',sans-serif; font-size:1rem; font-weight:700; margin-top:0.5rem; }
+/* Lookbook caption style */
+.lookbook .grid a p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.5rem;
+  transition: color 0.2s;
+}
+.lookbook .grid a:hover p {
+  color: #f05a28;
+}
 
-@media(max-width:1024px) { section.lookbook .grid div { flex:1 1 calc(45% - 1rem); max-width:calc(45% - 1rem); } }
-@media(max-width:768px) { section.lookbook .grid div { flex:1 1 100%; max-width:100%; } }
+/* product-detail page (unchanged) */
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+/* ... existing styles ... */
