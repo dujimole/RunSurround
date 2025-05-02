@@ -40,3 +40,25 @@ section .grid img { width: 100%; height: auto; border-radius: 0.5rem; }
   gap: 2rem;
 }
 /* ... existing styles ... */
+
+/* Mobile header and Lookbook fixes */
+@media (max-width: 600px) {
+  /* 1. 모바일에서 헤더 크기 줄이기 */
+  header.banner h1 {
+    font-size: 3rem !important;
+  }
+  /* 2. 룩북 가로 스크롤으로 전환 */
+  section.lookbook .grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 1rem !important;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  section.lookbook .grid div {
+    flex: 0 0 80% !important;
+    max-width: 80% !important;
+    margin-right: 1rem !important;
+  }
+}
