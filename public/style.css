@@ -1,51 +1,19 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body, html { width: 100%; height: 100%; font-family: sans-serif; }
-#intro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 100; }
-.intro-bg { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
-.intro-text { position: relative; color: #fff; font-size: 6vw; text-align: center; }
-#startBtn { margin-top: 1rem; font-size: 3vw; padding: 0.5rem 2rem; opacity: 0.8; background: none; border: 2px solid #fff; color: #fff; cursor: pointer; }
-#introVideo { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
-#main { display: none; width: 100%; height: 100%; overflow-y: auto; }
-header.banner { width: 100%; height: 40vh; background: url('assets/home-bg.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
-header.banner h1 { font-size: 5vw; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.7); }
-@media (max-width: 768px) {
-  header.banner { height: 30vh; }
-  header.banner h1 { font-size: 8vw; }
-}
 
-/* Journey Banner Styles */
-.journey-banner {
+
+/* Lookbook card enhancements */
+.lookbook .grid div {
   text-align: center;
-  padding: 2rem 1rem;
-  background: #fafafa;
 }
-.journey-banner-img {
-  max-width: 90%;
-  max-height: 200px;
+.lookbook .grid a {
   display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 1rem;
+  transition: transform 0.2s;
 }
-.journey-cta { margin-top: 1rem; }
-.btn-journey {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  background: #f05a28;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background 0.2s;
+.lookbook .grid a:hover {
+  transform: scale(1.05);
 }
-.btn-journey:hover { background: #d04a20; }
-
-/* Lookbook images */
-.lookbook .grid img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .lookbook .grid div { width: 100% !important; }
+.lookbook .grid p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
 }
