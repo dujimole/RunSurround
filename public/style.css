@@ -1,17 +1,32 @@
-/* style.css – 이미지 비율 고정 및 과도한 확대 방지 */
-header.banner {
-  height: 40vh;                  /* 배너 높이 조정 */
-  background-size: cover;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { width: 100%; height: 100%; overflow-x: hidden; font-family: sans-serif; }
+
+/* Intro and Video */
+#intro { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 100; }
+.intro-bg { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+.intro-text { position: relative; color: #fff; font-size: 6vw; text-align: center; }
+#startBtn { margin-top: 1rem; font-size: 3vw; padding: 0.5rem 2rem; opacity: 0.8; background: none; border: 2px solid #fff; color: #fff; cursor: pointer; }
+#introVideo { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: auto; height: 100vh; object-fit: contain; display: none; background: #000; z-index: 99; }
+
+#main { display: none; width: 100%; height: 100%; overflow-y: auto; }
+
+/* Header Banner */
+header.banner { width: 100%; height: 40vh; background: url('assets/home-bg.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+header.banner h1 { font-size: 5vw; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.7); }
+@media (max-width: 768px) {
+  header.banner { height: 30vh; }
+  header.banner h1 { font-size: 8vw; }
 }
-.journey-banner-img {
-  max-width: 90%;
-  max-height: 200px;             /* 배너 이미지 최대 높이 지정 */
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-}
-.lookbook .grid img {
-  max-width: 100%;
-  height: auto;                  /* lookbook 이미지 비율 유지 */
-  object-fit: cover;
+
+/* Journey Banner */
+.journey-banner { text-align: center; padding: 2rem 1rem; background: #fafafa; }
+.journey-banner-img { width: 100%; max-width: 90%; max-height: 200px; height: auto; object-fit: cover; border-radius: 8px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.journey-cta { margin-top: 1rem; }
+.btn-journey { display: inline-block; padding: 0.75rem 2rem; background: #f05a28; color: #fff; font-weight: 700; border-radius: 30px; text-decoration: none; transition: background 0.2s; }
+.btn-journey:hover { background: #d04a20; }
+
+/* Lookbook */
+.lookbook .grid img { width: 100%; height: auto; object-fit: cover; }
+@media (max-width: 768px) {
+  .lookbook .grid div { width: 100% !important; }
 }
