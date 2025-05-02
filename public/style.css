@@ -238,3 +238,15 @@ section h2 {
     white-space: normal; /* 줄바꿈 허용 */
   }
 }
+
+/* Orange Journey Button */
+.journey-button {
+  display: inline-block;
+  background-color: #F05A28;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
