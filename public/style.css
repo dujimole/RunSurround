@@ -1,66 +1,51 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body, html { width: 100%; height: 100%; overflow: hidden; font-family: sans-serif; }
+body, html { width: 100%; height: 100%; font-family: sans-serif; }
 #intro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 100; }
 .intro-bg { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
 .intro-text { position: relative; color: #fff; font-size: 6vw; text-align: center; }
 #startBtn { margin-top: 1rem; font-size: 3vw; padding: 0.5rem 2rem; opacity: 0.8; background: none; border: 2px solid #fff; color: #fff; cursor: pointer; }
 #introVideo { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
 #main { display: none; width: 100%; height: 100%; overflow-y: auto; }
-header.banner { width: 100%; height: 60vh; background: url('assets/home-bg.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
-header.banner h1 { font-size: 4vw; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.7); }
-section { padding: 2rem; background: #fff; }
-section h2 { text-align: center; font-size: 2rem; margin-bottom: 1rem; }
-section .grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
-section .grid div { width: calc(33.333% - 1rem); text-align: center; }
-section .grid img { width: 100%; height: auto; border-radius: 0.5rem; }
-
-
-/* product-detail page */
-.product-detail {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
-  gap: 2rem;
+header.banner { width: 100%; height: 40vh; background: url('assets/home-bg.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+header.banner h1 { font-size: 5vw; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.7); }
+@media (max-width: 768px) {
+  header.banner { height: 30vh; }
+  header.banner h1 { font-size: 8vw; }
 }
-.pd-image {
-  flex: 1 1 40%;
+
+/* Journey Banner Styles */
+.journey-banner {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fafafa;
 }
-.pd-image img {
+.journey-banner-img {
+  max-width: 90%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.journey-cta { margin-top: 1rem; }
+.btn-journey {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #f05a28;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-journey:hover { background: #d04a20; }
+
+/* Lookbook images */
+.lookbook .grid img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  object-fit: cover;
 }
-.pd-info {
-  flex: 1 1 50%;
-}
-.pd-info h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.pd-info p {
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-.pd-info ul {
-  list-style: disc inside;
-  margin-bottom: 1.5rem;
-}
-.pd-info li {
-  margin: 0.5rem 0;
-}
-.pd-actions .btn-primary,
-.pd-actions .btn-secondary {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  cursor: pointer;
-  margin-right: 1rem;
-}
-.btn-primary {
-  background: #000;
-  color: #fff;
-}
-.btn-secondary {
-  background: transparent;
-  color: #000;
-  border: 1px solid #000;
+@media (max-width: 768px) {
+  .lookbook .grid div { width: 100% !important; }
 }
