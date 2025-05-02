@@ -1,25 +1,19 @@
 
-/* style_update.css: Mobile header & Lookbook fixes */
-
-/* Reduce header font size on phones */
 @media (max-width: 768px) {
+  /* 줄어든 헤더 폰트 크기 */
   header.banner h1 {
-    font-size: 3vw !important;
+    font-size: 3rem !important;
   }
-}
-
-/* Make Lookbook horizontally scrollable on phones */
-@media (max-width: 768px) {
+  /* 룩북 가로 스크롤 전환 */
   section.lookbook .grid {
     display: flex !important;
-    overflow-x: auto;
-    padding-bottom: 1rem;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 1rem !important;
   }
   section.lookbook .grid div {
-    min-width: 70% !important;
-    flex: none !important;
-  }
-  section.lookbook .grid div img {
-    height: auto;
+    flex: 0 0 80% !important;
+    max-width: 80% !important;
+    margin-right: 1rem !important;
   }
 }
