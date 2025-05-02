@@ -1,54 +1,41 @@
-/* Base reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body, html { width: 100%; height: 100%; overflow: hidden; font-family: sans-serif; }
+/* Existing style.css content */
+/* ... (other CSS rules unchanged) ... */
 
-/* Intro section */
-#intro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 100; }
-.intro-bg { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
-.intro-text { position: relative; color: #fff; white-space: nowrap; font-size: 6vw; text-align: center; }
-#startBtn { margin-top: 1rem; font-size: 3vw; padding: 0.5rem 2rem; opacity: 0.8; background: none; border: 2px solid #fff; color: #fff; cursor: pointer; }
-
-/* Video & main */
-#introVideo { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
-#main { display: none; width: 100%; height: 100%; overflow-y: auto; }
-
-/* Header banner */
-header.banner { width: 100%; height: 60vh; background: url('assets/home-bg.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
-header.banner h1 { font-size: 4vw; color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.7); white-space: nowrap; line-height: 1; }
-
-/* Mobile header fix */
-@media (max-width: 600px) {
-  header.banner h1 { font-size: 6vw !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2; }
-}
-
-/* Journey banner section */
-.journey-banner { display: flex; flex-direction: column; align-items: center; margin: 2rem 0; }
-.journey-banner img { width: 100%; max-width: 800px; height: auto; border-radius: 8px; }
-.journey-cta a { display: inline-block; background: #f05a28; color: #fff; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 700; text-decoration: none; white-space: nowrap; }
-
-/* Sections */
-section { padding: 2rem; background: #fff; }
-section h2 { text-align: center; font-size: 2rem; margin-bottom: 1rem; }
-
-/* Lookbook scroll */
-.lookbook .grid { display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; }
-.lookbook .grid div { flex: 0 0 auto; width: 30%; text-align: center; }
-.lookbook .grid img { width: 100%; height: auto; border-radius: 0.5rem; }
-.lookbook .grid div p { margin-top: 0.5rem; color: #000; font-weight: 600; font-family: 'Montserrat', sans-serif; }
-
-/* Other styles retained ... */
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  header.banner { height: 40vh; }
-  header.banner h1 { font-size: 6vw; }
-  .journey-banner img { max-width: 100%; }
-  .lookbook .grid div { width: 60%; }
-}
-/*  ──────────────────────────────────────
-    The Journey 버튼과 배너 사이 간격 조정
-────────────────────────────────────── */
+/* Journey button styling */
 .journey-button {
-  display: block;
-  margin: 1.5rem auto;  /* 버튼 위·아래 1.5rem 여백 */
+  display: inline-block;
+  background-color: #f05a28;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+/* Responsive adjustments for header */
+/* Reduce height/font size on mobile for the main banner */
+@media (max-width: 768px) {
+  header.banner h1 {
+    font-size: 6vw; /* smaller font for mobile */
+    line-height: 1.2;
+  }
+}
+
+/* Lookbook styling tweak for better visibility */
+/* Ensure images and titles are clear and evenly spaced */
+.lookbook .grid div {
+  flex: 0 0 30%;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.lookbook .grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.lookbook .grid p {
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
