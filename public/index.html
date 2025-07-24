@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Run Surround</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
   <div id="intro">
@@ -15,6 +16,26 @@
       </h1>
       <button id="startBtn" style="margin-top:1rem; font-size:1.75rem; background:rgba(255,255,255,0.2); border:2px solid #fff; color:#fff; padding:0.75rem 2rem; border-radius:0.5rem; cursor:pointer;">YES</button>
     </div>
+  </div>
+
+  <!-- Signup form fixed on the right -->
+  <div id="signup" class="fixed top-0 right-0 h-full w-72 bg-white shadow-lg p-4 z-50">
+    <h2 class="text-xl font-bold mb-4">회원가입</h2>
+    <form id="signupForm" class="flex flex-col space-y-3">
+      <label class="flex flex-col">
+        <span class="text-sm mb-1">이름</span>
+        <input id="name" type="text" class="border rounded p-2" required>
+      </label>
+      <label class="flex flex-col">
+        <span class="text-sm mb-1">이메일</span>
+        <input id="email" type="email" class="border rounded p-2" required>
+      </label>
+      <label class="flex flex-col">
+        <span class="text-sm mb-1">비밀번호</span>
+        <input id="password" type="password" class="border rounded p-2" required>
+      </label>
+      <button type="submit" class="bg-blue-500 text-white rounded p-2">가입하기</button>
+    </form>
   </div>
 
   <video id="introVideo" src="assets/run_intro.mp4" muted playsinline></video>
